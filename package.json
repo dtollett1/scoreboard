@@ -3,8 +3,9 @@
   "name": "scoreboard",
   "scripts": {
     "start": "browser-sync start --server public --files public",
-    "deploy": "echo 'To setup deployment run: npm run setup-deploy'",
-    "setup-deploy": "app-app --deploy && npm run deploy"
+    "deploy": "netlify deploy --prod --dir=public",
+    "setup-deploy": "app-app --deploy && npm run deploy",
+    "postdeploy": "echo 'Your site was deployed to https://scoreboard-dustin.netlify.app'"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -26,5 +27,6 @@
     "prettier": "^2.1.2",
     "stylelint": "^13.7.1",
     "stylelint-config-standard": "^20.0.0"
-  }
+  },
+  "homepage": "https://scoreboard-dustin.netlify.app"
 }
